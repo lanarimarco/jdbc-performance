@@ -1,6 +1,6 @@
 
-## Use case
-| Use case | Select                                                            | Iterations | Source                                                                                     |
+## Use cases
+| ID       | Select                                                            | Iterations | Source                                                                                     |
 |:--------:|-------------------------------------------------------------------|-----------:|--------------------------------------------------------------------------------------------|
 |   UC1    | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |          1 | [TpjwebappsTest.java](src/main/java/com/rds_software/jdbc/performance/TpjwebappsTest.java) |
 |   UC10   | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |         10 | [TpjwebappsTest.java](src/main/java/com/rds_software/jdbc/performance/TpjwebappsTest.java) |
