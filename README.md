@@ -1,3 +1,12 @@
+
+## Use case
+| Use case | Select                                                            | Iterations |
+|:--------:|-------------------------------------------------------------------|-----------:|
+|   UC1    | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |          1 |
+|   UC10   | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |         10 |
+|   UC50   | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |         50 |
+|  UC300   | SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS |        300 |
+
 ## Clone repo
 
 ```sh
@@ -25,7 +34,7 @@ mvn clean package
 java -jar ./target/jdbc-performance.jar
 ```
 
-## Rds
+## RDS
 Client: prsjava.rdspr.rds-software.com
 AS400: as400new.rdspr.rds-software.com
 ```
@@ -52,3 +61,12 @@ AS400: 192.168.29.228
 2023-09-11 16:15:48 - Executing: TPJWEBAPPS 300 iterations
 2023-09-11 16:15:58 - Duration: 9688ms
 ```
+
+## Comparison
+
+| Use case | RDS(duration ms) | Servizi logistica (duration ms) |
+|:--------:|-----------------:|--------------------------------:|
+|   UC1    |              266 |                              94 |
+|   UC10   |               31 |                             437 |
+|   UC50   |              141 |                            1594 |
+|  UC300   |              750 |                            9688 |
