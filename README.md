@@ -35,8 +35,8 @@ java -jar ./target/jdbc-performance.jar
 ```
 
 ## RDS
-Client: prsjava.rdspr.rds-software.com
-AS400: as400new.rdspr.rds-software.com
+Client: prsjava.rdspr.rds-software.com  
+AS400: as400new.rdspr.rds-software.com  
 ```
 2023-09-11 16:01:05 - Executing: TPJWEBAPPS 1 iterations
 2023-09-11 16:01:05 - Duration: 266ms
@@ -49,8 +49,8 @@ AS400: as400new.rdspr.rds-software.com
 ```
 
 ## Servizi logistici
-Client: 192.168.29.225
-AS400: 192.168.29.228
+Client: 192.168.29.225  
+AS400: 192.168.29.228  
 ```
 2023-09-11 16:15:46 - Executing: TPJWEBAPPS 1 iterations
 2023-09-11 16:15:46 - Duration: 94ms
