@@ -7,24 +7,26 @@ import java.sql.ResultSet;
 public class TpjwebappsTest implements Test{
 
     private final Connection connection;
+    private final int iterations;
 
-    public TpjwebappsTest(Connection connection) {
+    public TpjwebappsTest(Connection connection, int iterations) {
         this.connection = connection;
+        this.iterations = iterations;
     }
 
     @Override
     public String getName() {
-        return "TPJWEBAPPS 300 iter";
+        return "TPJWEBAPPS " + iterations + " iterations";
     }
 
     public void test() throws Exception{
-        for(int test = 0; test < 300; test++) {
+        for(int iteration = 0; iteration < iterations; iteration++) {
             final String select = "SELECT ID, URL, TARGET, JSOPTIONS, ENV_IND, DESCR FROM TPJWEBAPPS";
             try(PreparedStatement stmt = connection.prepareStatement(select)) {
                 try (ResultSet resultSet = stmt.executeQuery()) {
                     while (resultSet.next()) {
-                        for(int i = 1; i <= 6; i++) {
-                            resultSet.getString(i);
+                        for(int column = 1; column <= 6; column++) {
+                            resultSet.getString(column);
                         }
                     }
                 }
